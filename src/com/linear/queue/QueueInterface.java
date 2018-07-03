@@ -15,7 +15,7 @@ public abstract class QueueInterface {
 
 	abstract void enQueue(int n);
 
-	abstract void deQueue(int n);
+	abstract Integer deQueue();
 	
 	public void display(){
 		for (int i = 0; i < arr.length; i++) {
@@ -28,7 +28,7 @@ public abstract class QueueInterface {
 	return arr[rear];
 	}
 
-	boolean isEmpty() {
+	public boolean isEmpty() {
 		return front == rear || front == size-1;
 	}
 
@@ -44,4 +44,7 @@ public abstract class QueueInterface {
 		return arr[rear];
 	}
 
+
+
+	
 }

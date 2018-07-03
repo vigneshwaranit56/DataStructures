@@ -10,7 +10,9 @@ public class CircularQueue extends QueueInterface {
 	void enQueue(int element) {}
 
 	@Override
-	void deQueue(int n) {}
+	Integer deQueue() {
+		return 0;
+	}
 	
 	public static void main(String args[]) {}
 
