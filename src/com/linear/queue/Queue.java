@@ -2,7 +2,7 @@ package com.linear.queue;
 
 public class Queue extends QueueInterface {
 
-	Queue(Integer size) {
+	public Queue(Integer size) {
 		super(size);
 
 	}
@@ -23,7 +23,8 @@ public class Queue extends QueueInterface {
 	}
 
 	@Override
-	public void deQueue(int n) {
+	public Integer deQueue() {
+		int del = 0;
 		if (isEmpty()) {
 			try {
 				throw new Exception("overflow");
@@ -31,8 +32,14 @@ public class Queue extends QueueInterface {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} else
-			arr[++front] = n;
+		} else {
+			int index = ++front;
+			del = arr[index];
+			arr[index] = 0;
+
+		}
+
+		return del;
 
 	}
 
