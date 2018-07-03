@@ -19,5 +19,8 @@ public interface Tree {
 	Integer height(Node node);
 
 	Boolean isEmpty(Node node);
+	
+	 public int countNodes(Node r);
+
 
 }
