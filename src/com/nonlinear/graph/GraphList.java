@@ -1,11 +1,9 @@
 package com.nonlinear.graph;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 
-import com.linear.queue.*;
+import com.linear.queue.Queue;;
 
 
 public class GraphList {
@@ -52,13 +50,13 @@ public class GraphList {
 		g.addEdge(1, 2);
 		g.addEdge(2, 3);
 
-		g.printGraph();
-		g.dfs(1);
-		for (int i = 0; i < visited.length; i++) {
-			visited[i] = false;
-
-		}
-		System.out.println();
+//		g.printGraph();
+//		g.dfs(1);
+//		for (int i = 0; i < visited.length; i++) {
+//			visited[i] = false;
+//
+//		}
+//		System.out.println("hello");
 		g.bfs(0);
 
 	}
@@ -77,7 +75,7 @@ public class GraphList {
 
 	}
 
-	private void bfs(Integer node) throws Exception {
+	private void bfs(Integer node){
 
 		visited[node] = true;
 		Queue queue = new Queue(numVertices);
@@ -89,6 +87,7 @@ public class GraphList {
 			e.printStackTrace();
 		}
 
+		System.out.println(queue.isEmpty());
 		while (!queue.isEmpty()) {
 			Integer el = queue.deQueue();
 			System.out.print(el + " vertex ");
