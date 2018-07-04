@@ -3,9 +3,9 @@ package com.linear.queue;
 public abstract class QueueInterface {
 	
 	int arr[];
-	int front;
+	int front =-1;
 	int rear = -1;
-	int size = -1;
+	int size = 0;
 	
 	public QueueInterface(int size) {
 		arr= new int[size];
