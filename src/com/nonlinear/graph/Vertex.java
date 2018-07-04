@@ -1,7 +1,8 @@
 package com.nonlinear.graph;
 
 
-	public class Vertex implements Comparable{
+	public class Vertex implements Comparable<Object>{
+		
 		private int id;
 		private float distance;
 		private Vertex parent;
