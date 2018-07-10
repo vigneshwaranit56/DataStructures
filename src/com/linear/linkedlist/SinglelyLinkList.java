@@ -57,12 +57,17 @@ public class SinglelyLinkList implements LinkdedList {
 	}
 
 	@Override
-	public void print() {
+	public String print() {
+		String values = "";
 		Node n = root;
 		while (n != null) {
+			values+=n.data;
+
 			System.out.println(n.data + " ");
 			n = n.next;
 		}
+		
+		return values;
 	}
 
 	public static void main(String args[]) {
