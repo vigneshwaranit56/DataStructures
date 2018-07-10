@@ -69,7 +69,8 @@ public class DoublyLinkList implements LinkdedList {
 	}
 
 	@Override
-	public void print() {
+	public String print() {
+		String str = "";
 		DNode n = root;
 		DNode last = null;
 		while (n != null) {
@@ -79,9 +80,14 @@ public class DoublyLinkList implements LinkdedList {
 		}
 		System.out.println();
 		while(last != null) {
+			str+=str+"";
 			System.out.println(last.data+" ");
 			last = last.prev;
 		}
+		
+		System.out.println(str);
+		
+		return str;
 	}
 	
 	public static void main(String args[]) {
@@ -93,7 +99,8 @@ public class DoublyLinkList implements LinkdedList {
 		
 //		list.remove(8);
 //		list.remove(5);
-		list.print();
+		System.out.println(list.print());
+
 
 		System.out.println("size ="+list.size());
 		
