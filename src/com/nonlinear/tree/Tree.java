@@ -2,25 +2,13 @@ package com.nonlinear.tree;
 
 public interface Tree {
 	
-	public  void preOrder(Node node);
 
-	public  void inOrder(Node node);
+	void delete( Integer value);
 
-	public void postOrder(Node node);
+	void insert( Integer key);
 
-	public  void levelOrder(Node node);
+	Boolean search(Integer key);
 
-	public  Node delete(Node node, Integer value);
-
-	Node insert(Node node, Integer key);
-
-	Boolean search(Node node, Integer key);
-	
-	Integer height(Node node);
-
-	Boolean isEmpty(Node node);
-	
-	 public int countNodes(Node r);
 
 
 }
