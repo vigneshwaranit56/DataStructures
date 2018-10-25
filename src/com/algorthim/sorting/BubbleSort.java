@@ -34,6 +34,9 @@ public class BubbleSort implements Sorting {
 
 			}
 		}
+		
+		System.out.println("ascending :"+Arrays.toString(arr));
+
 	}
 
 	@Override
@@ -49,6 +52,11 @@ public class BubbleSort implements Sorting {
 
 			}
 		}
+		
+		System.out.println("descending :"+Arrays.toString(arr));
+
+		
+		
 	}
 
 }
