@@ -1,16 +1,14 @@
 package com.linear.queue;
 
-public class CircularQueue extends QueueInterface {
+public class CircularQueue extends Queue {
 
 	public CircularQueue(int size) {
 		super(size);
 	}
 
-	@Override
-	void enQueue(int element) {}
+	public void enQueue(int element) {}
 
-	@Override
-	Integer deQueue() {
+	public Integer deQueue() {
 		return 0;
 	}
 	

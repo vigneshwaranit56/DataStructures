@@ -2,13 +2,34 @@ package com.nonlinear.tree;
 
 import java.util.ArrayDeque;
 
-public abstract class AbstractTree implements Tree {
-Node root;
-	public void preOrder(Node node) {
-		if (node != null)
-			preOrder(node.left);
-		preOrder(node.right);
-		System.out.println(node.value);
+public abstract class AbstractTree  {
+	
+	public Node root;
+
+	
+
+	public <T> void preOrder(T n) {
+		
+		if(n.getClass().isInstance(Node.class)) {
+			Node node = (Node)n;
+			if (node != null)
+				preOrder(node.left);
+			preOrder(node.right);
+			System.out.println(node.value);
+			
+			
+		}else if(n.getClass().isInstance(AVLNode.class)) {
+			
+			AVLNode node = (AVLNode)n;
+			if (node != null)
+				preOrder(node.left);
+			preOrder(node.right);
+			System.out.println(node.value);
+		}
+		
+		
+		
+		
 
 	}
 
@@ -63,7 +84,7 @@ Node root;
 
 	}
 
-	public Boolean isEmpty(Node node) {
+	public <T> Boolean isEmpty(T node) {
 
 		return node == null;
 	}

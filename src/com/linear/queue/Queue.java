@@ -1,13 +1,18 @@
 package com.linear.queue;
 
-public class Queue extends QueueInterface {
-
-	public Queue(Integer size) {
-		super(size);
+public  class Queue {
+	
+	int arr[];
+	int front =-1;
+	int rear = -1;
+	int size = 0;
+	
+	public Queue(int size) {
+		arr= new int[size];
+		this.size = size;
 
 	}
 
-	@Override
 	public void enQueue(int n) {
 
 		if (isFull()) {
@@ -22,7 +27,6 @@ public class Queue extends QueueInterface {
 
 	}
 
-	@Override
 	public Integer deQueue() {
 		int del = 0;
 		if (isEmpty()) {
@@ -42,18 +46,35 @@ public class Queue extends QueueInterface {
 		return del;
 
 	}
-
-	public static void main(String args[]) {
-
-		QueueInterface interface1 = new Queue(5);
-
-		interface1.enQueue(5);
-		interface1.enQueue(8);
-		interface1.enQueue(9);
-		interface1.enQueue(10);
-
-		System.out.println(interface1.peek());
-
+	
+	public void display(){
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(" "+arr[i]);
+		}
+		System.out.println(); 
 	}
 
+	int peek() {
+	return arr[rear];
+	}
+
+	public boolean isEmpty() {
+		return front == rear || front == size-1;
+	}
+
+	boolean isFull() {
+		return rear == size - 1;
+	}
+
+	int front() {
+		return arr[front];
+	}
+
+	int rear() {
+		return arr[rear];
+	}
+
+
+
+	
 }

@@ -12,6 +12,7 @@ public class GraphList {
 	private static LinkedList<Integer> adjLists[];
 	private static boolean visited[];
 
+	@SuppressWarnings("unchecked")
 	GraphList(int vertices) {
 		numVertices = vertices;
 		adjLists = new LinkedList[vertices];

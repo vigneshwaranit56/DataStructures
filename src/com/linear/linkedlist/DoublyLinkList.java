@@ -96,13 +96,49 @@ public class DoublyLinkList implements LinkdedList {
 		list.add(6);
 		list.add(7);
 		list.add(8);
+		list.add(5);
+		list.add(6);
+		list.add(7);
+		list.add(8);
+		list.print();
+
+		list.removeAlternate();
 		
 //		list.remove(8);
 //		list.remove(5);
-		System.out.println(list.print());
+list.print();
 
+		
+	}
 
-		System.out.println("size ="+list.size());
+	@Override
+	public void removeAlternate() {
+
+		DNode prev = root;
+		
+		DNode curr = prev.next;
+		
+		
+		
+		while (prev != null && curr != null) {
+
+			prev.next = curr.next;
+
+			prev = prev.next;
+
+			if (prev != null)
+				curr = prev.next;
+
+		}
+		
+		
+		
+		
+	}
+
+	@Override
+	public void removeLesserDataneightbour(Integer deleteFriends) {
+		// TODO Auto-generated method stub
 		
 	}
 

@@ -3,16 +3,17 @@ package com.nonlinear.tree;
 public class BinaryTree extends AbstractTree implements Tree {
 
 
+	Node root;
 	
 	public void insert(Integer key) {
 		 root = insert(root,key);
 		
 	}
-	@Override
+
 	public Node insert(Node node, Integer key) {
 
 		if (isEmpty(node))
-			return new Node(key);
+			return new BNode(key);
 		else {
 			
 			if (isEmpty(node.right))
@@ -25,11 +26,12 @@ public class BinaryTree extends AbstractTree implements Tree {
 		return node;
 	}
 
-	public Boolean search(int key) {
+	@Override
+	public Boolean search(Integer key) {
 		
 		return search(root,key);
 	}
-	@Override
+
 	public Boolean search(Node node, Integer key) {
 
 		if (isEmpty(node))
@@ -56,11 +58,12 @@ public class BinaryTree extends AbstractTree implements Tree {
 	public int countNodes() {
 		return countNodes(root);
 	}
-	@Override
+
 	public Node delete(Node node, Integer value) {
 
 		
 		return null;
 	}
+
 
 }

@@ -11,6 +11,7 @@ public class Graph {
 		return vCount;
 	}
 
+	@SuppressWarnings("unchecked")
 	public Graph(int vCount) {
 		this.vCount = vCount;
 		adj = new PriorityQueue[vCount];
