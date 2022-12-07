@@ -2,7 +2,7 @@ package com.linear.list.singlylinklist;
 
 import java.util.Collection;
 
-import com.practice.linear.list.ListI;
+import com.linear.list.ListI;
 
 public class SinglyLinkList<T> implements ListI<T> {
 

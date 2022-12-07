@@ -2,8 +2,8 @@ package com.linear.list.doublylinklist;
 
 import java.util.Collection;
 
-import com.practice.linear.list.ListI;
-import com.practice.linear.list.doublylinklist.*;
+import com.linear.list.ListI;
+import com.linear.list.doublylinklist.*;
 
 public class DoublyLinkList<T> implements ListI<T> {
 

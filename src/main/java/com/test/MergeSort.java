@@ -1,5 +1,7 @@
 package com.test;
 
+import java.util.Arrays;
+
 public class MergeSort implements Sorting {
 
 	public static void main(String[] args) {
@@ -10,22 +12,65 @@ public class MergeSort implements Sorting {
 
 	@Override
 	public void sort(int[] arr) {
-		int last = arr.length;
-//		
+		int last = arr.length-1;
 		sort(arr,0,last);
 		
 	}
 
 	private void sort(int[] arr, int l, int r) {
-		int middle = arr.length-1/2;
 
-		sort(arr,l,r);
-		sort(arr,l+1,r);
-		merge(arr,l,middle,r);
+		if(l<r){
+			int middle = l + (r - l) / 2;
+
+			sort(arr,l,middle);
+			sort(arr,middle+1,r);
+			merge(arr,l,middle,r);
+		}
+
 	}
 
+//
+
+
 	private void merge(int[] arr, int l, int middle, int r) {
-		
+
+		int n1 = middle - l + 1;
+		int n2 = r - middle;
+
+		/* Create temp arrays */
+		int lArr[] = new int[n1];
+		int rArr[] = new int[n2];
+
+		/*Copy data to temp arrays*/
+		for (int i = 0; i < n1; ++i)
+			lArr[i] = arr[l + i];
+		for (int j = 0; j < n2; ++j)
+			rArr[j] = arr[middle + 1 + j];
+		System.out.println("left array"+Arrays.toString(lArr));
+		System.out.println("right array"+Arrays.toString(rArr));
+
+		int i = 0,j =0,k=l;
+
+		while(i< lArr.length && j <rArr.length){
+			if(lArr[i] <= rArr[j]){
+				arr[k] = lArr[i++];
+			}else{
+				arr[k] = rArr[j++];
+
+			}
+			k++;
+		}
+
+		while(i < lArr.length){
+			arr[k++]=lArr[i++];
+		}
+
+		while(j < rArr.length){
+			arr[k++]=rArr[j++];
+		}
+
+		System.out.println("merged array"+Arrays.toString(arr));
+
 	}
 
 }
