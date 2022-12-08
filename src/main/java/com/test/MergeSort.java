@@ -46,20 +46,18 @@ public class MergeSort implements Sorting {
 			lArr[i] = arr[l + i];
 		for (int j = 0; j < n2; ++j)
 			rArr[j] = arr[middle + 1 + j];
-		System.out.println("left array"+Arrays.toString(lArr));
-		System.out.println("right array"+Arrays.toString(rArr));
 
 		int i = 0,j =0,k=l;
-
+		/* comparing two arrays with given limit*/
 		while(i< lArr.length && j <rArr.length){
 			if(lArr[i] <= rArr[j]){
 				arr[k] = lArr[i++];
 			}else{
 				arr[k] = rArr[j++];
-
 			}
 			k++;
 		}
+
 
 		while(i < lArr.length){
 			arr[k++]=lArr[i++];
@@ -68,8 +66,6 @@ public class MergeSort implements Sorting {
 		while(j < rArr.length){
 			arr[k++]=rArr[j++];
 		}
-
-		System.out.println("merged array"+Arrays.toString(arr));
 
 	}
 

@@ -1,6 +1,7 @@
 package com.test;
 
-public class AddTwoLinkList {
+public class
+AddTwoLinkList {
 
 	public class ListNode {
 		int val;
