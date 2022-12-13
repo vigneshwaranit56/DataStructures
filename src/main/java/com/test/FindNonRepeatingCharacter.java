@@ -13,7 +13,7 @@ public class FindNonRepeatingCharacter {
 
     }
 
-    private void solution(String abcba) {
+    public void solution(String abcba) {
 
 
         List<Character> list = new LinkedList<>();
