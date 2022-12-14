@@ -1,15 +1,12 @@
 package com.test;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class FindNonRepeatingCharacter {
 
     public static void main(String[] args){
         FindNonRepeatingCharacter findNonRepeatingCharacter = new FindNonRepeatingCharacter();
-        findNonRepeatingCharacter.solution("abcba");
+        findNonRepeatingCharacter.solution("vigneshwaran");
 
     }
 
@@ -18,15 +15,19 @@ public class FindNonRepeatingCharacter {
 
         List<Character> list = new LinkedList<>();
 
+        LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+
         for(Character c:abcba.toCharArray()){
-            if(list.contains(c)){
-                list.remove(c);
+            if(map.containsKey(c)){
+                map.put(c,map.get(c)+1);
             }else{
-                list.add(c);
+                map.put(c,1);
             }
         }
+        System.out.println(map);
+        Character nonRepeatingCharacter = map.entrySet().stream().filter(characterIntegerEntry -> characterIntegerEntry.getValue() ==1).findFirst().get().getKey();
 
-        System.out.println(list.stream().findFirst());
+        System.out.println(nonRepeatingCharacter);
 
     }
 }
