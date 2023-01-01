@@ -12,11 +12,7 @@ public class FindNonRepeatingCharacter {
 
     public void solution(String abcba) {
 
-
-        List<Character> list = new LinkedList<>();
-
         LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
-
         for(Character c:abcba.toCharArray()){
             if(map.containsKey(c)){
                 map.put(c,map.get(c)+1);
