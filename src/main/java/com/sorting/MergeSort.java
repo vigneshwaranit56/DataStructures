@@ -1,6 +1,6 @@
-package com.test;
+package com.sorting;
 
-import java.util.Arrays;
+import com.test.Sorting;
 
 public class MergeSort implements Sorting {
 
