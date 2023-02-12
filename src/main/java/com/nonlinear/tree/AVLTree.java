@@ -1,6 +1,8 @@
 package com.nonlinear.tree;
 
-public class AVLTree extends AbstractTree implements Tree {
+import com.nonlinear.tree.heap.TreeI;
+
+public class AVLTree extends AbstractTree implements TreeI<Integer> {
 	
 	
 	AVLNode root;
@@ -27,6 +29,12 @@ public class AVLTree extends AbstractTree implements Tree {
 	public Boolean search(Integer key) {
 		return search(root, key);
 	}
+
+	@Override
+	public void print() {
+
+	}
+
 
 	public Boolean search(AVLNode node, Integer key) {
 

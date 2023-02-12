@@ -113,17 +113,14 @@ public class MinHeapTree<Integer> implements TreeI<Integer> {
         }
 	}
 
-	@Override
 	public void preOrder() {
 
 	}
 
-	@Override
 	public void inOrder() {
 
 	}
 
-	@Override
 	public void postOrder() {
 
 	}
