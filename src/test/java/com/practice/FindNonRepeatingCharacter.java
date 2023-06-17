@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
-class FindNonRepeatingCharacterTest{
+class FindNonRepeatingCharacterTest implements ITestCaseTemplate{
     private FindNonRepeatingCharacter findNonRepeatingCharacter;
 
     @BeforeAll
@@ -18,8 +18,21 @@ class FindNonRepeatingCharacterTest{
         findNonRepeatingCharacter = new FindNonRepeatingCharacter();
     }
 
-    @Test
-    public void postiveCase(){
-    findNonRepeatingCharacter.solution("jshjahdjfjs");
+
+
+    @Override
+    public void positiveCase() {
+        findNonRepeatingCharacter.solution("jshjahdjfjs");
+
+    }
+
+    @Override
+    public void averageCase() {
+
+    }
+
+    @Override
+    public void negativeCase() {
+
     }
 }

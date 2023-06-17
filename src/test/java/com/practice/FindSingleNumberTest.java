@@ -14,12 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 
 
-public class FindSingleNumberTest {
+public class FindSingleNumberTest implements ITestCaseTemplate{
 
 
 
     @Test
-    public void postiveCase(){
+    public void positiveCase(){
         FindSingleNumber findSingleNumber = new FindSingleNumber();
 
         int[] arr = {4,1,2,1,2};
@@ -29,7 +29,7 @@ public class FindSingleNumberTest {
     }
 
     @Test
-    public void postiveCase1(){
+    public void negativeCase(){
         FindSingleNumber findSingleNumber = new FindSingleNumber();
 
         int[] arr = {2,2,1};

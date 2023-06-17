@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 
-public class FindTwoSumTest {
+public class FindTwoSumTest implements ITestCaseTemplate {
 
     @Test
-    public void postiveCase(){
+    public void positiveCase(){
         FindTwoSum findTwoSum = new FindTwoSum();
         int[] arr = {2,7,11,15};
         int target = 9;
