@@ -128,6 +128,6 @@ public class Trie extends AbstractTree implements TreeI<String> {
         System.out.println("========================");
         System.out.println("Printing all word present in trie : ");
 //        t.print();
-        t.printAllWordsInTrie(t.getHead(),"");
+        t.printAllWordsInTrie(t.getHead(),"de");
     }
 }
