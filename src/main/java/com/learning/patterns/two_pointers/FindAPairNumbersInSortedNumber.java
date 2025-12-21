@@ -76,7 +76,7 @@ public class FindAPairNumbersInSortedNumber {
            }else if( sum > target){
                right--;
            }else
-               left--;
+               left++;
        }
 
 
