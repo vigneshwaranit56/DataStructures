@@ -1,4 +1,4 @@
-package com.learning.patterns.two_pointers;
+package learning.patterns.two_pointers;
 
 import java.util.*;
 import java.util.stream.Collectors;

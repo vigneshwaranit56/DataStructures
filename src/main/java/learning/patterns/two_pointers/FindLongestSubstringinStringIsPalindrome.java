@@ -1,4 +1,4 @@
-package com.learning.patterns.two_pointers;
+package learning.patterns.two_pointers;
 
 public class FindLongestSubstringinStringIsPalindrome {
     public static void main(String[] args) {
